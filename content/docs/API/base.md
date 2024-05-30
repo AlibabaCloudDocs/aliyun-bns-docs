@@ -1,47 +1,37 @@
----
-weight: 1
-title: Ethereum
----
-
-# Ethereum
+# Base
 <br/>
 
-In order for your Web3 application to interact with the Ethereum blockchain — either by reading blockchain data or sending transactions to the network — it must connect to an Ethereum node.
+*Base* is a secure, low-cost, developer-friendly Ethereum L2 built to bring the next billion users to web3.
 
-For this purpose, every [Ethereum client](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients) implements a [JSON-RPC specification](https://github.com/ethereum/execution-apis), so there are a uniform set of methods that applications can rely on regardless of the specific node or client implementation.
+Base is built on the [Bedrock](https://stack.optimism.io/docs/releases/bedrock/explainer/) release of the [OP Stack](https://stack.optimism.io/), which is designed from the ground up to be as close to Ethereum as possible. Because of this, there are very little differences when it comes to building on Base and Ethereum.
 
-[JSON-RPC](https://www.jsonrpc.org/specification) is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in many various message passing environments. It uses JSON (RFC 4627) as data format.
+In order for your Web3 application to interact with Base — either by reading blockchain data or sending transactions to the network — it must connect to a Base node. Developers interact with the blockchain using the methods provided by the API.
 
-## Gossip, State, History
+The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification) which is a stateless, light-weight remote procedure call (RPC) protocol. It defines several data structures and the rules around their processing. It is transport agnostic in that the concepts can be used within the same process, over sockets, over HTTP, or in other message-passing environments. It uses JSON (RFC 4627) as data format.
 
-A handful of core JSON-RPC methods query data from the Ethereum network, and fall neatly into three main categories: Gossip, State, and History. Use the links in these sections to jump to each method, or use the table of contents to explore the whole list of methods.
+---
 
-### Gossip methods
+## Methods supported
+<br/>
 
-These methods track the head of the chain. This is how transactions make their way around the network, find their way into blocks, and how clients find out about new blocks.
-
+  * [`web3_clientVersion`](#web3_clientversion) — returns the current client version.
+  * [`web3_sha3`](#web3_sha3) — returns Keccak-256 (not the standardized SHA3-256) of the given data.
+  * [`net_version`](#net_version) — returns the current network ID.
+  * [`eth_syncing`](#eth_syncing) — returns data on the sync status or false.
+  * [`eth_gasPrice`](#eth_gasprice) — returns the current price per gas in wei.
+  * [`eth_accounts`](#eth_accounts) — returns a list of addresses owned by client.
   * [`eth_blockNumber`](#eth_blocknumber) — returns the number of most recent block.
-  * [`eth_sendRawTransaction`](#eth_sendrawtransaction) — creates a new message call transaction or a contract creation for signed transactions.
-
-### State methods
-
-Methods that report the current state of all the data stored. The "state" is like one big shared piece of RAM, and includes account balances, contract data, and gas estimations.
-
   * [`eth_getBalance`](#eth_getbalance) — returns the balance of the account specified by address.
   * [`eth_getStorageAt`](#eth_getstorageat) — returns the value from a storage position at an address specified.
   * [`eth_getTransactionCount`](#eth_gettransactioncount) — returns the number of transactions sent from an address.
-  * [`eth_getCode`](#eth_getcode) — returns code at an address specified.
-  * [`eth_call`](#eth_call) — executes a new message call immediately without creating a transaction on the blockchain.
-  * [`eth_estimateGas`](#eth_estimategas) — generates and returns an estimate of how much gas is necessary to allow the transaction to complete.
-
-### History methods
-
-Fetches historical records of every block back to genesis. This is like one large append-only file, and includes all block headers, block bodies, uncle blocks, and transaction receipts.
-
   * [`eth_getBlockTransactionCountByHash`](#eth_getblocktransactioncountbyhash) — returns the number of transactions in a block specified by block hash.
   * [`eth_getBlockTransactionCountByNumber`](#eth_getblocktransactioncountbynumber) — returns the number of transactions in the block specified by number.
   * [`eth_getUncleCountByBlockHash`](#eth_getunclecountbyblockhash) — returns the number of uncles in a block specified by block hash.
   * [`eth_getUncleCountByBlockNumber`](#eth_getunclecountbyblocknumber) — returns the number of uncles in a block specified by block number.
+  * [`eth_getCode`](#eth_getcode) — returns code at an address specified.
+  * [`eth_sendRawTransaction`](#eth_sendrawtransaction) — creates a new message call transaction or a contract creation for signed transactions.
+  * [`eth_call`](#eth_call) — executes a new message call immediately without creating a transaction on the blockchain.
+  * [`eth_estimateGas`](#eth_estimategas) — generates and returns an estimate of how much gas is necessary to allow the transaction to complete.
   * [`eth_getBlockByHash`](#eth_getblockbyhash) — returns information for the block specified by block hash.
   * [`eth_getBlockByNumber`](#eth_getblockbynumber) — returns information for the block specified by block number.
   * [`eth_getTransactionByHash`](#eth_gettransactionbyhash) — returns information on a transaction specified by transaction hash.
@@ -50,6 +40,9 @@ Fetches historical records of every block back to genesis. This is like one larg
   * [`eth_getTransactionReceipt`](#eth_gettransactionreceipt) — returns the receipt of a transaction by transaction hash.
   * [`eth_getUncleByBlockHashAndIndex`](#eth_getunclebyblockhashandindex) — returns information about an uncle of a block by hash and uncle index position.
   * [`eth_getUncleByBlockNumberAndIndex`](#eth_getunclebyblocknumberandindex) — returns information about an uncle of a block by number and uncle index position.
+  * [`eth_getLogs`](#eth_getlogs) — returns logs matching the parameters specified.
+
+---
 
 ## `web3_clientVersion`
 
@@ -71,7 +64,7 @@ Fetches historical records of every block back to genesis. This is like one larg
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -116,7 +109,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -159,7 +152,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -202,7 +195,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -245,7 +238,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -291,7 +284,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -348,7 +341,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -391,7 +384,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -436,7 +429,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -487,7 +480,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -540,7 +533,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -592,7 +585,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -637,7 +630,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -687,7 +680,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -732,7 +725,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -782,7 +775,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -833,7 +826,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -880,7 +873,7 @@ Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -938,7 +931,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -998,7 +991,7 @@ The transaction will not be added to the blockchain. Note that the estimate may 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1063,7 +1056,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1156,7 +1149,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1237,7 +1230,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1318,7 +1311,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1404,7 +1397,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1490,7 +1483,7 @@ The receipt is not available for pending transactions.
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1604,7 +1597,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1695,7 +1688,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
@@ -1785,7 +1778,7 @@ curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/eth/{apikey} \
+curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey} \
 -d '{
