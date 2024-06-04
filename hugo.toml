@@ -1,4 +1,4 @@
 baseURL = 'https://alibabadocs.github.pages/aliyun-bns-docs'
 languageCode = 'en-us'
-title = 'Alibaba BNS API'
+title = 'Alibaba BNS'
 theme = ['hugo-book']
