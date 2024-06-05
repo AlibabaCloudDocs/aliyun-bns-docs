@@ -23,7 +23,6 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 <br/>
 
   * [`web3_clientVersion`](#web3_clientversion) — returns the current client version.
-  * [`web3_sha3`](#web3_sha3) — returns Keccak-256 (not the standardized SHA3-256) of the given data.
   * [`net_version`](#net_version) — returns the current network ID.
   * [`eth_syncing`](#eth_syncing) — returns data on the sync status or false.
   * [`eth_gasPrice`](#eth_gasprice) — returns the current price per gas in wei.
@@ -90,51 +89,6 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
     "jsonrpc": "2.0",
     "result": "Geth/v1.9.10-stable/linux-amd64/go1.19.3",
     "id": 1
-}
-```
-
----
-
-## `web3_sha3`
-
-> Returns Keccak-256 (not the standardized SHA3-256) of the given data.
-
-### Parameters
-<br/>
-
-  * `id` (integer; required): a request ID (example: 1).
-  * `jsonrpc` (string; required): a JSON RPC spec used (example: 2.0).
-  * `method` (string; required): a method used for the request.
-  * `params` (array; required):
-
-* `<string>` (data): the data to convert into a SHA3 hash.
-
-### Returns
-<br/>
-
-  * `<string>` (data): the SHA3 result of the given string.
-
-### Request example
-
-```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
--d '{
-      "jsonrpc": "2.0",
-      "method": "web3_sha3",
-      "params": ["0x68656c6c6f20776f726c64"],
-      "id": 1
-    }'
-```
-
-### Response example
-
-```json
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
 }
 ```
 
