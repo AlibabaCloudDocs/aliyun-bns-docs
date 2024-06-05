@@ -12,7 +12,6 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 <br/>
 
   * [`web3_clientVersion`](#web3_clientversion) — returns the current client version.
-  * [`web3_sha3`](#web3_sha3) — returns Keccak-256 (not the standardized SHA3-256) of the given data.
   * [`net_version`](#net_version) — returns the current network ID.
   * [`eth_syncing`](#eth_syncing) — returns data on the sync status or false.
   * [`eth_gasPrice`](#eth_gasprice) — returns the current price per gas in wei.
@@ -63,7 +62,7 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "web3_clientVersion",
@@ -79,51 +78,6 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
     "jsonrpc": "2.0",
     "result": "Geth/v1.9.10-stable/linux-amd64/go1.19.3",
     "id": 1
-}
-```
-
----
-
-## `web3_sha3`
-
-> Returns Keccak-256 (not the standardized SHA3-256) of the given data.
-
-### Parameters
-<br/>
-
-  * `id` (integer; required): a request ID (example: 1).
-  * `jsonrpc` (string; required): a JSON RPC spec used (example: 2.0).
-  * `method` (string; required): a method used for the request.
-  * `params` (array; required):
-
-* `<string>` (data): the data to convert into a SHA3 hash.
-
-### Returns
-<br/>
-
-  * `<string>` (data): the SHA3 result of the given string.
-
-### Request example
-
-```shell
-curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
--d '{
-      "jsonrpc": "2.0",
-      "method": "web3_sha3",
-      "params": ["0x68656c6c6f20776f726c64"],
-      "id": 1
-    }'
-```
-
-### Response example
-
-```json
-{
-    "jsonrpc": "2.0",
-    "id": 1,
-    "result": "0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad"
 }
 ```
 
@@ -151,7 +105,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "net_version",
@@ -194,7 +148,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "net_listening",
@@ -237,7 +191,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_protocolVersion",
@@ -283,7 +237,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_syncing",
@@ -340,7 +294,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_gasPrice",
@@ -383,7 +337,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_accounts",
@@ -428,7 +382,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_blockNumber",
@@ -479,7 +433,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getBalance",
@@ -532,7 +486,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getStorageAt",
@@ -584,7 +538,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getTransactionCount",
@@ -629,7 +583,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getBlockTransactionCountByHash",
@@ -679,7 +633,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getBlockTransactionCountByNumber",
@@ -724,7 +678,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getUncleCountByBlockHash",
@@ -774,7 +728,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getUncleCountByBlockNumber",
@@ -825,7 +779,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getCode",
@@ -872,7 +826,7 @@ Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract 
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
     "jsonrpc": "2.0",
     "method": "eth_sendRawTransaction",
@@ -930,7 +884,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
     "jsonrpc": "2.0",
     "method": "eth_call",
@@ -990,7 +944,7 @@ The transaction will not be added to the blockchain. Note that the estimate may 
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
     "jsonrpc": "2.0",
     "method": "eth_estimateGas",
@@ -1055,7 +1009,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getBlockByHash",
@@ -1148,7 +1102,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getBlockByNumber",
@@ -1229,7 +1183,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getTransactionByHash",
@@ -1310,7 +1264,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getTransactionByBlockHashAndIndex",
@@ -1396,7 +1350,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getTransactionByBlockNumberAndIndex",
@@ -1482,7 +1436,7 @@ The receipt is not available for pending transactions.
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getTransactionReceipt",
@@ -1596,7 +1550,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getUncleByBlockHashAndIndex",
@@ -1687,7 +1641,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getUncleByBlockNumberAndIndex",
@@ -1777,7 +1731,7 @@ curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 ```shell
 curl -X POST https://bns.aliyuncs.com/arb/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey} \
+-H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "jsonrpc": "2.0",
       "method": "eth_getLogs",
