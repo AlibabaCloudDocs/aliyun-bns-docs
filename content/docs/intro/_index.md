@@ -11,3 +11,7 @@ longer need to send requests to their own local nodes, but only need to send req
 provides the same API - BNS, to access the information on the blockchain), thereby exempting customers
 from The cost of node operation and maintenance, time-consuming development, and services are
 unavailable/scalable.
+
+# Authentication
+
+To call BNS apis, you need to use the *apikey* and *secretkey* issued by the platform for authentication.
