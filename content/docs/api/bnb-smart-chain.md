@@ -71,7 +71,7 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -114,7 +114,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -157,7 +157,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -200,7 +200,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -246,7 +246,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -303,7 +303,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -346,7 +346,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -391,7 +391,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -442,7 +442,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -495,7 +495,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -547,7 +547,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -592,7 +592,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -642,7 +642,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -687,7 +687,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -737,7 +737,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -788,7 +788,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -835,7 +835,7 @@ Use [eth_getTransactionReceipt](#eth_gettransactionreceipt) to get the contract 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -893,7 +893,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -953,7 +953,7 @@ The transaction will not be added to the blockchain. Note that the estimate may 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1018,7 +1018,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1111,7 +1111,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1192,7 +1192,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1273,7 +1273,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1359,7 +1359,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1559,7 +1559,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1650,7 +1650,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -1740,7 +1740,7 @@ curl -X POST https://bns.aliyuncs.com/base/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/base/{apikey} \
+curl -X POST https://bns.aliyuncs.com/bsc/{apikey} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
