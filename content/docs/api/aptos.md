@@ -57,7 +57,7 @@ Aptos API uses the REST interface for querying, responses come in [JSON format](
 
 ### Get account
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}`**
 
 Returns the authentication key and the sequence number for an account address. Optionally, a ledger version can be specified. If the ledger version is not specified in the request, the latest ledger version is used.
 
@@ -70,7 +70,7 @@ Returns the authentication key and the sequence number for an account address. O
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -88,7 +88,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address} \
 
 ### Get account resources
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/resources`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resources`**
 
 Retrieves all account resources for a given account and a specific ledger version. If the ledger version is not specified in the request, the latest ledger version is used.
 
@@ -107,7 +107,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/resources \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resources \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -140,7 +140,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/r
 
 ### Get account modules
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/modules`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/modules`**
 
 Retrieves all account modules' bytecode for a given account at a specific ledger version. If the ledger version is not specified in the request, the latest ledger version is used.
 
@@ -159,7 +159,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/modules \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/modules \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -227,7 +227,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/m
 
 ### Get account resource
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/resource/{resource_type}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resource/{resource_type}`**
 
 Retrieves an individual resource from a given account and at a specific ledger version. If the ledger version is not specified in the request, the latest ledger version is used.
 
@@ -245,7 +245,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/resource/{resource_type} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resource/{resource_type} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -276,7 +276,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/r
 
 ### Get account module
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/module/{module_name}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/module/{module_name}`**
 
 Retrieves an individual module from a given account and at a specific ledger version. If the ledger version is not specified in the request, the latest ledger version is used.
 
@@ -292,7 +292,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/module/{module_name} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/module/{module_name} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -360,7 +360,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/m
 
 ### Get blocks by height
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_height/{block_height}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_height/{block_height}`**
 
 This endpoint allows you to get the transactions in a block and the corresponding block information.
 
@@ -376,7 +376,7 @@ If the block is pruned, it will return a 410
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_height/{block_height} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_height/{block_height} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -423,7 +423,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_height/{bl
 
 ### Get blocks by version
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_version/{version}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_version/{version}`**
 
 This endpoint allows you to get the transactions in a block and the corresponding block information given a version in the block.
 
@@ -439,7 +439,7 @@ If the block has been pruned, it will return a 410
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_version/{version} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_version/{version} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -488,7 +488,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/blocks/by_version/{v
 
 ### Get events by creation number
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/events/{creation_number}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{creation_number}`**
 
 Event types are globally identifiable by an account `address` and monotonically increasing `creation_number`, one per event type emitted to the given account. This API returns events corresponding to that that event type.
 
@@ -504,7 +504,7 @@ Event types are globally identifiable by an account `address` and monotonically 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/events/{creation_number} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{creation_number} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -530,7 +530,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/e
 
 ### Get events by event handle
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/events/{event_handle}/{field_name}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{event_handle}/{field_name}`**
 
 This API uses the given account `address`, `eventHandle`, and `fieldName` to build a key that can globally identify an event types. It then uses this key to return events emitted to the given account matching that event type.
 
@@ -549,7 +549,7 @@ This API uses the given account `address`, `eventHandle`, and `fieldName` to bui
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/events/{event_handle}/{field_name} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{event_handle}/{field_name} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -577,7 +577,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/e
 
 ### Get ledger info
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/`**
 
 Retrieves the latest ledger information, including data such as chain ID, role type, ledger versions, epoch, etc.
 
@@ -588,7 +588,7 @@ None.
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/ \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/ \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -615,7 +615,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/ \
 
 ### Get table item
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handle}/item`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/item`**
 
 Get a table item at a specific ledger version from the table identified by `{table_handle}` in the path and the "key" (TableItemRequest) provided in the request body.
 
@@ -664,7 +664,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handle}/item \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/item \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
@@ -684,7 +684,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handl
 
 ### Get raw table item
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handle}/raw_item`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/raw_item`**
 
 Get a table item at a specific ledger version from the table identified by `{table_handle}` in the path and the "key" (RawTableItemRequest) provided in the request body.
 
@@ -705,7 +705,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handle}/item \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/item \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
@@ -725,7 +725,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/tables/{table_handl
 
 ### Get transactions
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions`**
 
 Retrieves on-chain committed transactions. The page size and start ledger version can be provided to get a specific sequence of transactions.
 
@@ -742,7 +742,7 @@ To retrieve a pending transaction, use [Get transactions by hash](#get-transacti
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -782,7 +782,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions \
 
 ### Submit transaction
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions`**
 
 This endpoint accepts transaction submissions in two formats.
 
@@ -937,7 +937,7 @@ Request is an `application/json` body with the following parameters:
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
@@ -996,7 +996,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions \
 
 ### Get transaction by hash
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_hash/{txn_hash}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_hash/{txn_hash}`**
 
 Retrieves a transaction by its hash. This is the same hash that is returned by the API when submitting a transaction (see PendingTransaction).
 
@@ -1015,7 +1015,7 @@ To create a transaction hash by yourself, do the following:
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_hash/{txn_hash} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_hash/{txn_hash} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -1053,7 +1053,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_hash
 
 ### Get transaction by version
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_version/{txn_version}`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_version/{txn_version}`**
 
 Retrieves a transaction by a given version. If the version has been pruned, a 410 will be returned.
 
@@ -1065,7 +1065,7 @@ Retrieves a transaction by a given version. If the version has been pruned, a 41
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_version/{txn_version} \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_version/{txn_version} \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -1103,7 +1103,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/by_vers
 
 ### Get account transactions
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/transactions`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/transactions`**
 
 Retrieves on-chain committed transactions from an account. If the start version is too far in the past, a 410 will be returned.
 
@@ -1122,7 +1122,7 @@ To retrieve a pending transaction, use [Get transaction by hash](#get-transactio
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/transactions \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/transactions \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -1162,7 +1162,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/accounts/{address}/t
 
 ### Submit batch transactions
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/batch`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/batch`**
 
 Submits multiple transactions. The response has three outcomes:
 
@@ -1321,7 +1321,7 @@ A request body is represented by an array of the following parameters:
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/batch \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/batch \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '[
@@ -1371,7 +1371,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/batch 
 
 ### Simulate transaction
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/simulate`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/simulate`**
 
 Simulates a transaction. The output of the transaction will have the exact transaction outputs and events that running an actual signed transaction would have. However, it will not have the associated state hashes, as they are not updated in storage. This can be used to estimate the maximum gas units for a submitted transaction.
 
@@ -1531,7 +1531,7 @@ A request body is represented by an array of the following parameters:
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/simulate \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/simulate \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
@@ -1620,7 +1620,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/simula
 
 ### Encode submission
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/encode_submission`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/encode_submission`**
 
 This endpoint accepts an EncodeSubmissionRequest, which internally is a UserTransactionRequestInner (and optionally secondary signers) encoded as JSON, validates the request format, and then returns that request encoded in BCS. The client can then use this to create a transaction signature to be used in a SubmitTransactionRequest, which it then passes to the [Submit transaction](#submit-transaction) POST endpoint.
 
@@ -1722,7 +1722,7 @@ Submission encoding request body contains the following parameters:
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/encode_submission \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/encode_submission \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
@@ -1759,7 +1759,7 @@ curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/transactions/encode
 
 ### Estimate gas price
 
-> **GET `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/estimate_gas_price`**
+> **GET `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/estimate_gas_price`**
 
 Currently, the gas estimation is handled by taking the median of the last 100,000 transactions If a user wants to prioritize their transaction and is willing to pay, they can pay more than the gas price. If they're willing to wait longer, they can pay less. Note that the gas price moves with the fee market, and should only increase when demand outweighs supply.
 
@@ -1772,7 +1772,7 @@ None.
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/estimate_gas_price \
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/estimate_gas_price \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}'
 ```
@@ -1793,7 +1793,7 @@ curl -X GET https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/estimate_gas_price \
 
 ### Execute view function of a module
 
-> **POST `https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/view`**
+> **POST `https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/view`**
 
 Executes the Move function with the given parameters and return its execution result.
 
@@ -1818,7 +1818,7 @@ The Move view function request body contains the following parameters:
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/rest/aptos/v1/{apikey}/view \
+curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/view \
 -H 'Content-Type: application/json' \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
