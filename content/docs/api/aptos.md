@@ -70,9 +70,7 @@ Returns the authentication key and the sequence number for an account address. O
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}
 ```
 
 #### Response example
@@ -107,9 +105,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resources \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resources
 ```
 
 #### Response example
@@ -159,9 +155,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/modules \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/modules
 ```
 
 #### Response example
@@ -245,9 +239,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resource/{resource_type} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/resource/{resource_type}
 ```
 
 #### Response example
@@ -292,9 +284,7 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/module/{module_name} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/module/{module_name}
 ```
 
 #### Response example
@@ -376,9 +366,7 @@ If the block is pruned, it will return a 410
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_height/{block_height} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_height/{block_height}
 ```
 
 #### Response example
@@ -439,9 +427,7 @@ If the block has been pruned, it will return a 410
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_version/{version} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/blocks/by_version/{version}
 ```
 
 #### Response example
@@ -504,9 +490,7 @@ Event types are globally identifiable by an account `address` and monotonically 
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{creation_number} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{creation_number}
 ```
 
 #### Response example
@@ -549,9 +533,7 @@ This API uses the given account `address`, `eventHandle`, and `fieldName` to bui
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{event_handle}/{field_name} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/events/{event_handle}/{field_name}
 ```
 
 #### Response example
@@ -588,9 +570,7 @@ None.
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/ \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/
 ```
 
 #### Response example
@@ -666,7 +646,6 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/item \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
       "key_type": "string",
       "value_type": "string",
@@ -707,7 +686,6 @@ The Aptos nodes prune account state history, via a configurable time window. If 
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/tables/{table_handle}/item \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
   "key": "0x88fbd33f54e1126269769780feb24480428179f552e2313fbe571b72e62a1ca1 "
 }'
@@ -743,8 +721,7 @@ To retrieve a pending transaction, use [Get transactions by hash](#get-transacti
 
 ```shell
 curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+-H 'Content-Type: application/json'
 ```
 
 #### Response example
@@ -939,7 +916,6 @@ Request is an `application/json` body with the following parameters:
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
   "sender": "0x88fbd33f54e1126269769780feb24480428179f552e2313fbe571b72e62a1ca1 ",
   "sequence_number": "32425224034",
@@ -1015,9 +991,7 @@ To create a transaction hash by yourself, do the following:
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_hash/{txn_hash} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_hash/{txn_hash}
 ```
 
 #### Response example
@@ -1065,9 +1039,7 @@ Retrieves a transaction by a given version. If the version has been pruned, a 41
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_version/{txn_version} \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/by_version/{txn_version}
 ```
 
 #### Response example
@@ -1122,9 +1094,7 @@ To retrieve a pending transaction, use [Get transaction by hash](#get-transactio
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/transactions \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/accounts/{address}/transactions
 ```
 
 #### Response example
@@ -1323,7 +1293,6 @@ A request body is represented by an array of the following parameters:
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/batch \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '[
   {
     "sender": "0x88fbd33f54e1126269769780feb24480428179f552e2313fbe571b72e62a1ca1 ",
@@ -1533,7 +1502,6 @@ A request body is represented by an array of the following parameters:
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/simulate \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
   "sender": "0x88fbd33f54e1126269769780feb24480428179f552e2313fbe571b72e62a1ca1 ",
   "sequence_number": "32425224034",
@@ -1724,7 +1692,6 @@ Submission encoding request body contains the following parameters:
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/transactions/encode_submission \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
 -d '{
   "sender": "0x88fbd33f54e1126269769780feb24480428179f552e2313fbe571b72e62a1ca1 ",
   "sequence_number": "32425224034",
@@ -1772,9 +1739,7 @@ None.
 #### Request example
 
 ```shell
-curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/estimate_gas_price \
--H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}'
+curl -X GET https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/estimate_gas_price
 ```
 
 #### Response example
@@ -1820,7 +1785,6 @@ The Move view function request body contains the following parameters:
 ```shell
 curl -X POST https://bns.aliyuncs.com/v1/aptos/mainnet/{apikey}/v1/view \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
   "function": "0x1::aptos_coin::transfer",
   "type_arguments": [

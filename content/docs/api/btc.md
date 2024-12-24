@@ -91,7 +91,7 @@ The block hash, hex-encoded.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getbestblockhash",
@@ -187,7 +187,7 @@ A string that is serialized, hex-encoded data for the block hash.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblock",
@@ -292,7 +292,7 @@ getblockchaininfo
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockchaininfo",
@@ -351,7 +351,7 @@ The current block count.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockcount",
@@ -402,7 +402,7 @@ getblockfilter "blockhash" ( "filtertype" )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockfilter",
@@ -450,7 +450,7 @@ The hash of the block.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockhash",
@@ -523,7 +523,7 @@ A string that is serialized, hex-encoded data for block hash.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockheader",
@@ -635,7 +635,7 @@ getblockstats hash_or_height ( stats )
 **Block hash param**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockstats",
@@ -646,7 +646,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Block height param**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getblockstats",
@@ -710,7 +710,7 @@ getchaintips
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getchaintips",
@@ -780,7 +780,7 @@ getchaintxstats ( nblocks "blockhash" )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getchaintxstats",
@@ -832,7 +832,7 @@ The proof-of-work difficulty as a multiple of the minimum difficulty.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getdifficulty",
@@ -924,7 +924,7 @@ getmempoolancestors "txid" ( verbose )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getmempoolancestors",
@@ -1006,7 +1006,7 @@ getmempooldescendants "txid" ( verbose )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getmempooldescendants",
@@ -1073,7 +1073,7 @@ getmempoolentry "txid"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getmempoolentry",
@@ -1117,7 +1117,7 @@ getmempoolinfo
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getmempoolinfo",
@@ -1235,7 +1235,7 @@ getrawmempool ( verbose mempool_sequence )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getrawmempool",
@@ -1312,7 +1312,7 @@ gettxout "txid" n ( include_mempool )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "gettxout",
@@ -1358,7 +1358,7 @@ A string that is a serialized, hex-encoded data for the proof.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "gettxoutproof",
@@ -1409,7 +1409,7 @@ verifytxoutproof "proof"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "verifytxoutproof",
@@ -1486,7 +1486,7 @@ analyzepsbt "psbt"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "analyzepsbt",
@@ -1549,7 +1549,7 @@ The base64-encoded partially signed transaction.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "combinepsbt",
@@ -1593,7 +1593,7 @@ The hex-encoded raw transaction with signatures.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "combinerawtransaction",
@@ -1634,7 +1634,7 @@ The resulting raw transaction (base64-encoded string).
 **Create a transaction**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "createrawtransaction",
@@ -1645,7 +1645,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Convert the transaction to PSBT**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "converttopsbt",
@@ -1722,7 +1722,7 @@ The resulting raw transaction (base64-encoded string).
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "createpsbt",
@@ -1801,7 +1801,7 @@ A hex string of the transaction.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "hww",
       "method": "createrawtransaction",
@@ -1935,7 +1935,7 @@ decodepsbt "psbt"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "decodepsbt",
@@ -2067,7 +2067,7 @@ decoderawtransaction "hexstring" ( iswitness )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "decoderawtransaction",
@@ -2166,7 +2166,7 @@ decodescript "hexstring"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "decodescript",
@@ -2236,7 +2236,7 @@ finalizepsbt "psbt" ( extract )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "finalizepsbt",
@@ -2348,7 +2348,7 @@ The serialized, hex-encoded data for `txid`.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getrawtransaction",
@@ -2402,7 +2402,7 @@ The base64-encoded partially signed transaction.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "joinpsbts",
@@ -2444,7 +2444,7 @@ The transaction hash in hex.
 **Create a transaction**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "createrawtransaction",
@@ -2455,7 +2455,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Sign the transaction, and get back the hex**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "signrawtransactionwithwallet",
@@ -2466,7 +2466,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Send the transaction (signed hex)**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "sendrawtransaction",
@@ -2531,7 +2531,7 @@ testmempoolaccept ["rawtx",...] ( maxfeerate )
 **Create a transaction**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "createrawtransaction",
@@ -2542,7 +2542,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Sign the transaction, and get back the hex**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "signrawtransactionwithwallet",
@@ -2553,7 +2553,7 @@ curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
 **Test acceptance of the transaction (signed hex)**:
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "testmempoolaccept",
@@ -2617,7 +2617,7 @@ The base64-encoded partially signed transaction with inputs updated.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "utxoupdatepsbt",
@@ -2680,7 +2680,7 @@ estimatesmartfee conf_target ( "estimate_mode" )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "estimatesmartfee",
@@ -2735,7 +2735,7 @@ getindexinfo ( "index_name" )
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getindexinfo",
@@ -2780,7 +2780,7 @@ validateaddress "address"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "validateaddress",
@@ -2834,7 +2834,7 @@ If the signature is verified or not.
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "verifymessage",
@@ -2913,7 +2913,7 @@ getaddressinfo "address"
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/btc/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/btc/mainnet/{apikey} \
 -d '{
       "id": "test",
       "method": "getaddressinfo",

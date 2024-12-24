@@ -71,9 +71,8 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -107,9 +106,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -166,9 +164,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -228,9 +225,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -304,9 +300,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -409,9 +404,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -487,9 +481,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -554,9 +547,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -635,9 +627,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -726,9 +717,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -780,9 +770,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -832,9 +821,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",
@@ -888,9 +876,8 @@ curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
 #### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/ton/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/ton/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -d '{
       "id": 1,
       "jsonrpc": "2.0",

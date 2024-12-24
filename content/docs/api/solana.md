@@ -118,8 +118,7 @@ The API interaction follows the [JSON-RPC](https://www.jsonrpc.org/specification
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -162,8 +161,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -247,8 +245,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -314,7 +311,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
     * `transactions` (array): to be included if "full" transaction details are requested; an array of JSON objects containing:
       * `transaction` (object|[string,encoding]): a [transaction object](https://docs.solana.com/developing/clients/jsonrpc-api#transaction-structure), either in JSON format or encoded binary data, depending on encoding parameter.
       * `meta` (object): a transaction status metadata object, containing `null` or:
-        * `err` (object|null): an error if transaction failed, null if transaction succeeded. [TransactionError definitions](https://github.com/solana-labs/solana/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13).
+        * `err` (object|null): an error if transaction failed, null if transaction succeeded. [TransactionError definitions](https://github.com/solana-labs/v1/solana/mainnet/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13).
         * `fee` (u64): a fee this transaction was charged with, as u64 integer.
         * `preBalances` (array): an array of u64 account balances from before the transaction was processed.
         * `postBalances` (array): an array of u64 account balances after the transaction was processed.
@@ -352,8 +349,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -427,8 +423,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -509,8 +504,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -568,8 +562,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -607,8 +600,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -679,8 +671,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -737,8 +728,7 @@ The result field will be an array of u64 integers listing confirmed blocks betwe
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -789,8 +779,7 @@ The result field will be an array of u64 integers listing confirmed blocks start
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -837,8 +826,7 @@ Each validator reports their UTC time to the ledger on a regular interval by int
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -887,8 +875,7 @@ The result field will be an array of JSON objects, each with the following subfi
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -953,8 +940,7 @@ The result field will be an object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1007,8 +993,7 @@ The result is an object containing the following parameters:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1065,8 +1050,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1119,8 +1103,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1161,8 +1144,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1204,8 +1186,7 @@ If the node is healthy: "ok" If the node is unhealthy, a JSON RPC error response
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1284,8 +1265,7 @@ This will find the highest full snapshot slot, and the highest incremental snaps
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1343,8 +1323,7 @@ The `result` parameter containing the following field:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1400,8 +1379,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1451,8 +1429,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1514,8 +1491,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1578,8 +1554,7 @@ The result will be a JSON object with value equal to an array of:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1678,8 +1653,7 @@ NEW: This method is only available in solana-core v1.9 or newer. Please use [`ge
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1746,8 +1720,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1776,8 +1749,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1831,8 +1803,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1873,8 +1844,7 @@ Returns the max slot seen from after shred insert.
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1925,8 +1895,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -1988,8 +1957,7 @@ The result will be a JSON object with value equal to an array of:
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -2041,8 +2009,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -2145,8 +2112,7 @@ By default, the result field will be an array of JSON objects. If `withContext` 
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -2180,8 +2146,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -2257,8 +2222,7 @@ The `result` object containing the following parameters:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
@@ -2347,7 +2311,7 @@ The `result` field is an array of transaction signature information, ordered fro
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2425,7 +2389,7 @@ Unless the `searchTransactionHistory` configuration parameter is included, this 
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2470,7 +2434,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2546,7 +2510,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2598,7 +2562,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2643,7 +2607,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2712,7 +2676,7 @@ The `result` object contains the following fields:
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2740,7 +2704,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2806,7 +2770,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2877,7 +2841,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -2953,7 +2917,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3068,7 +3032,7 @@ The result contains the `value` object with the following fields:
 ### Request parameters
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3176,7 +3140,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3253,7 +3217,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3347,7 +3311,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3434,7 +3398,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3521,7 +3485,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3565,7 +3529,7 @@ The `result` object contains the following parameters:
 ### Request parameters
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3629,7 +3593,7 @@ The result field will be a JSON object of `current` and `delinquent` accounts, e
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3688,7 +3652,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 Restricts the results to a single validator vote account.
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3774,7 +3738,7 @@ NEW: This method is only available in solana-core v1.9 or newer. Please use [`ge
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3828,7 +3792,7 @@ This value may increase over time if the node is configured to purge older ledge
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3881,7 +3845,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -3953,7 +3917,7 @@ The returned signature is the first signature in the transaction, which is used 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4009,7 +3973,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 
 The result will be a JSON object with the `value` containing the following fields:
 
-  * `err` (object|string|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/solana/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
+  * `err` (object|string|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/v1/solana/mainnet/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
   * `logs` (array|null): an array of log messages the transaction instructions output during execution, null if simulation failed before the transaction was able to execute (for example due to an invalid blockhash or signature verification failure).
   * `accounts` (array|null): an array of accounts with the same length as the `accounts.addresses` array in the request:
     * `<null>`: if the account doesn't exist or if `err` is not null.
@@ -4027,7 +3991,7 @@ The result will be a JSON object with the `value` containing the following field
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4116,7 +4080,7 @@ The `result` is an object containing the following fields:
     * `transactions` (array): to be included if "full" transaction details are requested; an array of JSON objects containing:
       * `transaction` (object|[string,encoding]): the [Transaction](https://docs.solana.com/developing/clients/jsonrpc-api#transaction-structure) object, either in JSON format or encoded binary data, depending on encoding parameter.
       * `meta` (object): the transaction status metadata object, containing null or:
-        * `err` (object|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/solana/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
+        * `err` (object|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/v1/solana/mainnet/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
         * `fee` (u64): the fee this transaction was charged, as u64 integer.
         * `preBalances` (array): an array of u64 account balances from before the transaction was processed.
         * `postBalances` (array): an array of u64 account balances after the transaction was processed.
@@ -4139,7 +4103,7 @@ The `result` is an object containing the following fields:
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4229,7 +4193,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4324,7 +4288,7 @@ The result field will be an array of u64 integers listing confirmed blocks betwe
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4380,7 +4344,7 @@ The result field will be an array of u64 integers listing confirmed blocks start
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4439,14 +4403,14 @@ The `result` contains the transaction signature information, ordered from newest
 
   * `signature` (string): the transaction signature as base-58 encoded string.
   * `slot` (u64): the slot that contains the block with the transaction.
-  * `err` (object|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/solana/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
+  * `err` (object|null): Error if transaction failed, null if transaction succeeded. See the [TransactionError](https://github.com/solana-labs/v1/solana/mainnet/blob/c0c60386544ec9a9ec7119229f37386d9f070523/sdk/src/transaction/error.rs#L13) definitions.
   * `memo` (string|null): the memo associated with the transaction, null if no memo is included.
   * `blockTime` (i64|null): the estimated production time, as Unix timestamp (seconds since the Unix epoch) of when transaction was processed; null if not available.
 
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4533,7 +4497,7 @@ DEPRECATED: Please use [`getTransaction`](#gettransaction) instead. This method 
 ### Request example 1
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4619,7 +4583,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ### Request example 2
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4678,7 +4642,7 @@ curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
 ## `getFeeCalculatorForBlockhash` (DEPRECATED)
 
 <Callout type="warning">
-DEPRECATED: Please use [`isBlockhashValid`](#isblockhashvalid) or [`getFeeForMessage`](/rpc-service/chains/chains-api/solana/#getfeeformessage) instead. This method is expected to be removed in solana-core v2.0
+DEPRECATED: Please use [`isBlockhashValid`](#isblockhashvalid) or [`getFeeForMessage`](/rpc-service/chains/chains-api/v1/solana/mainnet/#getfeeformessage) instead. This method is expected to be removed in solana-core v2.0
 </Callout>
 
 > **Returns the fee calculator associated with the query blockhash, or `null` if the blockhash has expired.**
@@ -4713,7 +4677,7 @@ The `value` object contains the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4772,7 +4736,7 @@ The result is an object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4845,7 +4809,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4915,7 +4879,7 @@ The result contains the `value` object with the following fields:
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'X-BNS-AUTH-SECRET: {secretkey}' \
 -H 'Content-Type: application/json' \
 -d '{
@@ -4972,8 +4936,7 @@ DEPRECATED: Please use [`getHighestSnapshotSlot`](#gethighestsnapshotslot) inste
 ### Request example
 
 ```shell
-curl -X POST https://bns.aliyuncs.com/solana/{apikey} \
--H 'X-BNS-AUTH-SECRET: {secretkey}' \
+curl -X POST https://bns.aliyuncs.com/v1/solana/mainnet/{apikey} \
 -H 'Content-Type: application/json' \
 -d '{
       "jsonrpc": "2.0",
